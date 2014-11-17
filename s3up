@@ -225,11 +225,11 @@
             $info = pathinfo($remote_name);
             if($isJsOrCss)
             {
-                if (!array_key_exists('o', $options)) {
+                //if (!array_key_exists('o', $options)) {
                     $remote_name = $info['dirname'] . '/' . $info['filename'] . '.gz';
                     if(strlen($info['extension']) > 0)
                         $remote_name .= '.' . $info['extension'];
-                }
+                //}
 
                 $gzname = tempnam('/tmp', 's3up');
                 if(!is_null($the_real_file)) $filename = $the_real_file;
